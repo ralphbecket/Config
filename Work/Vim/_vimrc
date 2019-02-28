@@ -1,0 +1,45 @@
+source $VIMRUNTIME\mswin.vim
+set autoindent
+set backspace=indent,eol,start
+set nobackup
+set expandtab
+set formatoptions=tcqr
+set ignorecase
+set noincsearch
+set ruler
+set shiftwidth=4
+set noswapfile
+set tabstop=4
+set visualbell
+set wildmenu
+set wildmode=longest,list
+
+nnoremap <Leader>f :files<CR>
+nnoremap <Leader>1 1<C-^>
+nnoremap <Leader>2 2<C-^>
+nnoremap <Leader>3 3<C-^>
+nnoremap <Leader>4 4<C-^>
+nnoremap <Leader>5 5<C-^>
+nnoremap <Leader>6 6<C-^>
+nnoremap <Leader>7 7<C-^>
+nnoremap <Leader>8 8<C-^>
+nnoremap <Leader>9 9<C-^>
+nnoremap <Leader>m <C-W>b:wa<CR>:!make > Make.err<CR>:vi!<CR>
+nnoremap <Leader>t :!make tags<CR>
+nnoremap <Leader>c I// <Esc>j
+nnoremap <Leader>C I/* <Esc>A */<Esc>j
+vnoremap <Leader>c :s/^/\/\/ <CR>
+vnoremap <Leader>C :s/.*/\/* & *\/<CR>
+nnoremap <Leader>u :s/^\( *\)\/\/ \=/\1/<CR>
+nnoremap <Leader>U :s/^\( *\)\/\* \=\(.*\) \*\//\1\2/<CR>
+vnoremap <Leader>u :s/^\( *\)\/\/ \=/\1/<CR>
+vnoremap <Leader>U :s/^\( *\)\/\* \=\(.*\) \*\//\1\2/<CR>
+nnoremap <Leader>j :%!python -m json.tool<CR>
+
+syntax on
+colorscheme railscasts
+set guifont=consolas:h12:cANSI
+source $VIMRUNTIME/mswin.vim
+set backupdir=$HOME/Bak
+set lines=48
+set columns=120
