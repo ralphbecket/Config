@@ -1,2 +1,4 @@
-@.\mRemoteNG\Sync.bat
-@.\Vim\Sync.bat
+@echo off
+call .\mRemoteNG\Sync.bat
+call .\NeoVim\Sync.bat
+call .\Vim\Sync.bat

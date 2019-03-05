@@ -1,4 +1,5 @@
 source $VIMRUNTIME\mswin.vim
+
 set autoindent
 set backspace=indent,eol,start
 set nobackup
@@ -24,8 +25,6 @@ nnoremap <Leader>6 6<C-^>
 nnoremap <Leader>7 7<C-^>
 nnoremap <Leader>8 8<C-^>
 nnoremap <Leader>9 9<C-^>
-nnoremap <Leader>m <C-W>b:wa<CR>:!make > Make.err<CR>:vi!<CR>
-nnoremap <Leader>t :!make tags<CR>
 nnoremap <Leader>c I// <Esc>j
 nnoremap <Leader>C I/* <Esc>A */<Esc>j
 vnoremap <Leader>c :s/^/\/\/ <CR>
@@ -37,9 +36,12 @@ vnoremap <Leader>U :s/^\( *\)\/\* \=\(.*\) \*\//\1\2/<CR>
 nnoremap <Leader>j :%!python -m json.tool<CR>
 
 syntax on
-colorscheme railscasts
+colorscheme slate
+highlight Normal guibg=black
+highlight NonText guibg=black
+highlight Search None
 set guifont=consolas:h12:cANSI
-source $VIMRUNTIME/mswin.vim
+
 set backupdir=$HOME/Bak
 set lines=48
 set columns=120
