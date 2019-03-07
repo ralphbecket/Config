@@ -1,5 +1,6 @@
 choco install -y GoogleGhrome
 choco install -y grep
+choco install -y AstroGrep
 choco install -y WinMerge
 choco install -y NeoVim
 choco install -y mRemoteNG
