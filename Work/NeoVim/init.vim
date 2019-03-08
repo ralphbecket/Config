@@ -1,1 +1,1 @@
-source $HOMEPATH\_vimrc
+source C:\Users\ralph\_vimrc
