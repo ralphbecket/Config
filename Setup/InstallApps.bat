@@ -8,3 +8,4 @@ choco install -y ConEmu
 choco install -y Everything
 choco install -y Clover
 choco install -y RocketChat
+choco install -y LINQPad
