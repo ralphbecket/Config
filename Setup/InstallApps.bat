@@ -9,3 +9,5 @@ choco install -y Everything
 choco install -y Clover
 choco install -y RocketChat
 choco install -y LINQPad
+choco install -y Git
+choco install -y TortoiseSVN
