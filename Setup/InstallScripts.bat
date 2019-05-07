@@ -11,5 +11,8 @@ if exist %neovimDir% (
 echo Adding neovim to the context menu.
 regedit NeovimContextMenu.reg
 
+echo Setting Caps Lock as an alternative Ctrl key (active from next login).
+regedit SetCapsAsCtrl.reg
+
 echo Creating vim backup folder ~/Bak
 mkdir %userprofile%\Bak
