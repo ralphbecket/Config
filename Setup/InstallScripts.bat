@@ -1,6 +1,8 @@
 echo off
 setlocal
 
+set root=%~dp0
+
 echo Adding vi.bat as a synonym for neovim.
 set neovimDir=C:\tools\neovim\Neovim\bin
 if exist %neovimDir% (
@@ -9,10 +11,14 @@ if exist %neovimDir% (
 )
 
 echo Adding neovim to the context menu.
-regedit NeovimContextMenu.reg
+regedit "%root%\NeovimContextMenu.reg"
 
 echo Setting Caps Lock as an alternative Ctrl key (active from next login).
-regedit SetCapsAsCtrl.reg
+regedit "%root%\SetCapsAsCtrl.reg"
 
-echo Creating vim backup folder ~/Bak
-mkdir %userprofile%\Bak
+echo Creating Vim backup folder ~/Bak
+mkdir "%userprofile%\Bak"
+
+echo Installing init.vim and _vimrc Vim start-up scripts.
+copy "%root%\init.vim" "%localappdata%\nvim\init.vim"
+copy "%root%\_vimrc" "%userprofile%\_vimrc"
