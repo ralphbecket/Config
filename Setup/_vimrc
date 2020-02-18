@@ -1,7 +1,10 @@
+" Make the mouse, clipboard etc. work as expected on Windows.
 source $VIMRUNTIME\mswin.vim
 
+" Standard stuff.
 set autoindent
 set backspace=indent,eol,start
+set backupdir=$HOME/Bak
 set nobackup
 set expandtab
 set formatoptions=tcqr
@@ -11,10 +14,12 @@ set ruler
 set shiftwidth=4
 set noswapfile
 set tabstop=4
+set title
 set visualbell
 set wildmenu
 set wildmode=longest,list
 
+" Quick buffer access.
 nnoremap <Leader>f :files<CR>
 nnoremap <Leader>1 1<C-^>
 nnoremap <Leader>2 2<C-^>
@@ -25,6 +30,8 @@ nnoremap <Leader>6 6<C-^>
 nnoremap <Leader>7 7<C-^>
 nnoremap <Leader>8 8<C-^>
 nnoremap <Leader>9 9<C-^>
+
+" Standard commenting stuff.
 nnoremap <Leader>c I// <Esc>j
 nnoremap <Leader>C I/* <Esc>A */<Esc>j
 vnoremap <Leader>c :s/^/\/\/ <CR>
@@ -33,8 +40,15 @@ nnoremap <Leader>u :s/^\( *\)\/\/ \=/\1/<CR>
 nnoremap <Leader>U :s/^\( *\)\/\* \=\(.*\) \*\//\1\2/<CR>
 vnoremap <Leader>u :s/^\( *\)\/\/ \=/\1/<CR>
 vnoremap <Leader>U :s/^\( *\)\/\* \=\(.*\) \*\//\1\2/<CR>
-nnoremap <Leader>j :%!python -m json.tool<CR>
 
+" Move into 'vi' mode in terminals.
+tnoremap <C-W>n <C-\><C-n>
+tnoremap <F1> <C-\><C-n>
+tnoremap <C-V> <C-W>"+
+tnoremap <S-SPACE> <SPACE>
+tnoremap <C-SPACE> <SPACE>
+
+" Syntax highlighting.
 syntax on
 colorscheme slate
 highlight Normal guibg=black
@@ -42,7 +56,3 @@ highlight NonText guibg=black
 highlight Search None
 set guifont=consolas:h12:cANSI
 
-set backupdir=$HOME/Bak
-set lines=48
-set columns=120
-set title

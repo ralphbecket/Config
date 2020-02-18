@@ -2,10 +2,10 @@ choco install -y GoogleGhrome
 choco install -y grep
 choco install -y AstroGrep
 choco install -y WinMerge
-choco install -y NeoVim
+choco install -y GVim
+::choco install -y NeoVim
 choco install -y mRemoteNG
 choco install -y ConEmu
-choco install -y Everything
 choco install -y QTTabBar
 choco install -y RocketChat
 choco install -y LINQPad
