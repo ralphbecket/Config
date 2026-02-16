@@ -1,6 +1,11 @@
 # Run in the login shell.
 
-export PATH="$PATH:/usr/local/mercury-22.01.8/bin"
-
-alias vi=nvim
+BASHRC_D=~/.config/bashrc.d
+if [ -d ${BASHRC_D} ]
+then
+    for bash_rc in ${BASHRC_D}/*
+    do
+        . ${bash_rc} || echo "Error in ${bash_rc}"
+    done
+fi
 
