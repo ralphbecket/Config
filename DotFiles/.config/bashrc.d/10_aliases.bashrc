@@ -10,6 +10,6 @@ do
 done
 [ -z $(type -p vim) ] && alias vim=vi
 
-alias ls="ls --color=auto"
-alias la="ls --color=auto -a"
-alias ll="ls --color=auto -la"
+#alias ls="ls --color=auto"
+#alias la="ls --color=auto -a"
+#alias ll="ls --color=auto -la"
